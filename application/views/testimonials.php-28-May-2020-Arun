@@ -1,0 +1,52 @@
+<?php $this->load->view('home_header_view'); ?>
+
+
+<!-- Content Row -->
+<div class="container main_container">
+    <div class="main_body">
+        <div class="row">
+
+
+            
+
+
+
+            <section class="col-md-12" style="min-height: 395px;">
+
+                <div class="panel">
+                    <?php
+                    $filter[0]['id'] = 'id';
+                    $filter[0]['value'] = $category;
+                    $req = array("*");
+                    $records = $this->main_model->get_many_records("testimonials", $filter, $req, 'id');
+                   // print_r($records);die;
+                    foreach ($records as $key => $value) {
+                        $limited_word = ($value['detailed_desc']);
+                        echo '<h2> ' . $value['name'] . '</h2><hr>';
+                    if($value['image_file'] != ""){
+                        echo '<div class="row">';
+                                      $url=base_url()."assets/img/uploads/".$value['image_file'];
+                                     echo $img=' <div class="col-md-3 well"><div class="img-cover text-center_">
+                                        <img src="'.$url.'" style="width: 200px;
+    height: 200px;" />
+                                    </div>
+                                    <p style="font-size: 14px;margin: 13px 0;"><strong>'.$value['author'].'</strong></P>
+                                    </div>';
+                                  }
+                          echo ' <div class="col-md-9"> <p class="text-justify">' . $limited_word . '</p>
+                          </div>';
+                    }
+                    echo '</div>';
+                    ?>
+
+                </div>
+            </section><!-- end col-md-9 -->
+
+
+        </div>
+
+        <?php
+        $this->load->view('home_footer');
+        ?>
+    </div>
+</div>

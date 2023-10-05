@@ -1,0 +1,28 @@
+table.table_report {
+    width:100%;
+}
+table.table_report, th.table_report, td.table_report {
+    border: 1px solid #dcdcdc;
+    border-collapse: collapse;
+}
+th.table_report, td.table_report {
+    padding: 5px;
+    text-align: left;
+}
+table.table_report tr:nth-child(even) {
+    background-color: #E0EEB7;
+}
+table.table_report tr:nth-child(odd) {
+    background-color: #ffffff;
+}
+table.table_report th {
+    color: white;
+    background-color: #8FC66F;
+}
+table.table_report td, th{
+    padding : 10px;
+    border: 1px solid #dcdcdc;
+    text-align: left;
+}
+        
+        

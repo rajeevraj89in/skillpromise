@@ -1,0 +1,215 @@
+<?php
+$this->load->view('header_view');?>
+
+<!-- Content Row -->
+ <div class="container main_container">
+     <div class="main_body">
+        <div class="row imgcarousel">        
+            <div class="col-md-9 sliderimg">
+                <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+                    <!-- Indicators -->
+                    <ol class="carousel-indicators">
+                        <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                        <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                        <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                    </ol>
+
+                    <!-- Wrapper for slides -->
+                    <div class="carousel-inner" >
+                        <div class="item active">
+                            <div class="header-text hidden-xs" style="position:absolute; top:0px;">  
+                                <div class="slider-content">
+                                <h4 class="title"><b>How Good are Your Leadership Skills</b></h4>  
+                                <p>Take our quick self-test and find the tools you need to communicate powerfully.</p> 
+                                <div class="slider_btn text-left" >
+                                  <a href="">click to get started</a>
+                                </div>
+                                </div>
+                            </div>
+                            <img class="img-responsive" src="<?php echo(base_url() . 'assets/img/' . 'banner1.jpg'); ?>" width="100%" alt="">
+                        </div>
+                        <div class="item">
+                            <div class="header-text hidden-xs" style="position:absolute; top:0px;">  
+                                <div class="slider-content">
+                                <h4 class="title"><b>How Good are Your Leadership Skills</b></h4>  
+                                <p>Take our quick self-test and find the tools you need to communicate powerfully.</p> 
+                                 <div class="slider_btn text-left" >
+                                  <a href="">click to get started</a>
+                                </div>
+                                </div>
+                            </div>
+                            <img class="img-responsive" src="<?php echo(base_url() . 'assets/img/' . 'banner1.jpg'); ?>" width="100%" alt="">
+                        </div>
+                        <div class="item">
+                            <div class="header-text hidden-xs" style="position:absolute; top:0px;">  
+                                <div class="slider-content">
+                                <h4 class="title"><b>How Good are Your Leadership Skills</b></h4>  
+                                <p>Take our quick self-test and find the tools you need to communicate powerfully.</p> 
+                                 <div class="slider_btn text-left" >
+                                  <a href="">click to get started</a>
+                                </div>
+                                </div>
+                            </div>
+                            <img class="img-responsive" src="<?php echo(base_url() . 'assets/img/' . 'banner1.jpg'); ?>" width="100%" alt="">
+                        </div>
+                    </div>
+        
+                    <!-- Controls -->
+                    <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+                        <span class="glyphicon glyphicon-chevron-left"></span>
+                    </a>
+                    <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
+                        <span class="glyphicon glyphicon-chevron-right"></span>
+                    </a>
+                    
+                    
+                </div>
+            </div>
+        
+            <!-- Newsletter Column -->
+            <div class="col-md-3" id="newsletter">
+            
+            <div class="dooble-border">
+
+                <div class="well fre_news">
+                    <h3 id="free_news">Free Newsletter </h3><br/>
+                    <p class="textstyle">Learn new skills every month and get our Personal Selling Toolkit free as the Subscription bonus.</p>
+                    <div class="input-group">
+                        <form action="<?php echo base_url().'subscribNewsLetter/user'; ?>" id="news_letter" method="POST">
+                            <input id="first_name" name="first_name" class="form-control inputbox" placeholder="First Name" type="text" data-validation-required-message="Please enter your first name." required="" aria-invalid="false"/>
+                            <input id="last_name" name="last_name" class="form-control inputbox" placeholder="Last Name" type="text" data-validation-required-message="Please enter your last name." required="" aria-invalid="false"/>
+                            <input id="email" name="email" class="form-control inputbox" placeholder="Email" type="email" data-validation-required-message="Please enter your email address." required="" aria-invalid="false"/>
+                            
+                            <button type="submit" class="bttn btn btn-primary inputbox"><b>Subscribe</b></button>
+                        </form>
+                    </div>
+                    <br/>
+                    <!-- /.input-group -->
+                </div>
+            </div>
+
+         </div>
+        
+        </div>
+        <!-- /.row -->
+        <div class="row">
+         
+          <div class="col-md-8">
+
+                <!-- Blog Search Well -->
+             <div class="dooble-border">
+                <!--<div class="well">-->
+                    <div class="panel panel_head"> <h4>Explore Our Programs</h4></div>
+                    <div class="row">
+                        <?php
+                $query['data'] = $this->main_model->get_records('node', 'parent_id', 0, 'name');
+                foreach ($query['data']->result() as $rec) {
+                   //echo "<pre>";
+                   //var_dump($rec);die;
+                 if(($rec->image_file) == NULL){
+                     $url="http://placehold.it/500x300";
+                 }
+                 else{
+                     $url=base_url().'assets/img/uploads/'.$rec->image_file ;
+                      
+                 }
+                  ?>  
+                    <div class="col-sm-3 col-xs-8 porgram-col-box">
+                        <div class="program-box">
+                            
+                           <?php echo '<a href="' . base_url() . "node/program/$rec->id" . ' ">' ?>
+                                <img class="img-responsive img-hover img-height img-related img-thumbnail" src="<?php echo $url; ?>" alt="">
+                            </a>
+                            <div class="nod_img">
+                                <span class="node_text"><?=$rec->name ;?></span>
+                            </div>
+                        </div>
+                    </div>
+                                                      
+                    
+               <?php }
+                ?>
+                        
+   
+                   </div>
+             </div>
+         </div> 
+            <!-- Quick Link -->
+            <div class="col-md-4 quic_col">
+<!--               <div class="well__" id="well-id_">
+                    <div class="panel quickpanelhead"><h4>Quick Link</h4></div>                   -->
+                     <ul class="nav navbar-nav side-nav new_well">
+                         <li class="col-md-12 quickpanelhead"><h4>Quick Link</h4></li>   
+                         
+                         
+                       <!--  <li class="dropdown quicklink_li">
+				<a href="" class="dropdown-toggle" data-toggle="dropdown"> Aptitude Development <b class="fa fa-chevron-down"></b></a>
+                                    <ul role="menu" class="dropdown-menu col-md-12">
+					<li><a href=""> Quantitave </a></li>	
+					<li><a href=""> Reasoning </a></li>
+                                    </ul>
+                        </li>
+                        <li class="dropdown quicklink_li">
+				<a data-toggle="dropdown" href="#"> Hard Skills <b class="fa fa-chevron-down"></b></a>
+                                    <ul role="menu" class="dropdown-menu">
+					<li><a href=""> Computer Fundamentals </a></li>	
+					<li><a href=""> Hard Skills </a></li>
+                                    </ul>
+                        </li>
+                    
+                     </ul>
+<!--                </div>-->
+ <?php
+                            
+                            $filter[0]['id'] = "parent_id";
+                            $filter[0]['value'] = 0;
+                            $filter[1]['id'] = "status";
+                            $filter[1]['value'] = 'Active';
+                            $filter[2]['id'] = "type";
+                            $filter[2]['value'] = 'Module';
+
+                            $req_field = array("id","name");
+                            $result = $this-> main_model->get_many_records("node", $filter, $req_field,'name'); 
+                         
+                            //print_r($result);//die;
+                            
+                            foreach($result as $rec){ 
+                                
+                            ?>
+                               <li class="dropdown quicklink_li">
+				<a href="" class="dropdown-toggle" data-toggle="dropdown"><?php echo $rec['name']; ?>  <b class="fa fa-chevron-right"></b></a>
+                                    <ul role="menu" class="dropdown-menu col-md-12">
+                                     <?php  
+                                        
+                                        $filter_2[0]['id'] = "parent_id";
+                                        $filter_2[0]['value'] = $rec['id'];
+                                        $filter_2[1]['id'] = "status";
+                                        $filter_2[1]['value'] = 'Active';
+                                        $filter_2[2]['id'] = "type";
+                                        $filter_2[2]['value'] = 'Module';
+
+                                        $req_field_2 = array("id","name");
+                                        $result_2 = $this-> main_model->get_many_records("node", $filter_2, $req_field_2,'name'); 
+    
+                                        foreach($result_2 as $rec_2){                                         
+                                            echo '<li><a href="'.base_url() . 'node/program/'.$rec_2['id'].'">'.$rec_2['name'].'</a></li>'; 
+                                        }
+                                           
+                                        ?>
+					
+                                        </ul>
+                                </li> 
+                                        
+					
+                              <?php } ?>
+</ul>            
+
+
+</div>
+      
+       </div>
+     </div>
+<?php
+$this->load->view('footer_view');
+?>
+ </div>

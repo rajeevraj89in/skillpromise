@@ -1,0 +1,51 @@
+<!--content panel start -->
+    <section class="col-md-9">
+        <div class="dooble-border">
+          <!--<div class="page-header">-->
+              <div class="panel">
+                  <h2>About Skill Promise <small>What you can do with Skill Promise</small></h2>
+              </div><!-- end page header -->
+               <p class="lead text-justify">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+              <!-- <a href="" class="btn btn-large btn-primary bttn">Click Me</a>
+
+        </div><!-- end well -->
+    </section><!-- end col-md-9 -->
+<!--end content panel start -->
+
+<!--<div class="col-md-3" style="float: left">
+                <div class="well border">
+                    <div class="panel panel_quick">
+                        <h4>Quick Link</h4></div>
+                    <p>Learn new skills every month and get our Personal Selling Toolkit free as the Subscription bonus.</p>
+                    <br><br><br><br><br><br>
+                </div>
+     </div>-->
+
+<!--<div class="col-md-3">
+        <ul class="nav navbar-nav side-nav new_well">
+                         <li class="col-md-12 quickpanelhead"><h4>Quick Link</h4></li>                           
+                         <li class="dropdown quick_li">
+				<a href="" class="dropdown-toggle" data-toggle="dropdown"> Aptitude Development <b class="fa fa-chevron-down"></b></a>
+                                    <ul role="menu" class="dropdown-menu col-md-12">
+					<li><a href=""> Quantitave </a></li>	
+					<li><a href=""> Reasoning </a></li>
+                                    </ul>
+                        </li>
+                        <li class="dropdown quick_li">
+				<a data-toggle="dropdown" href="#"> Hard Skills <b class="fa fa-chevron-down"></b></a>
+                                    <ul role="menu" class="dropdown-menu">
+					<li><a href=""> Computer Fundamentals </a></li>	
+					<li><a href=""> Hard Skills </a></li>
+                                    </ul>
+                        </li>
+                    
+        </ul>
+</div>
+
+
+</div> end bigCallout-->
+
+    <!-- End Content and Sidebar
+===================================================== -->
+<!-- end main -->
+

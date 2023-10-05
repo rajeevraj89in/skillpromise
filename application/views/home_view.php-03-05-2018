@@ -1,0 +1,185 @@
+<?php $this->load->view('home_header_view'); ?>
+
+<!-- Content Row -->
+<div class="container main_container">
+    <div class="main_body">
+        <div class="row imgcarousel">        
+            <div class="col-md-8 sliderimg">
+                <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+                    <!-- Indicators -->
+                    <ol class="carousel-indicators">
+                        <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                        <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                        <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                    </ol>
+
+                    <!-- Wrapper for slides -->
+                    <div class="carousel-inner" >
+                        <div class="item active">
+                            <div class="header-text hidden-xs">  
+                                <div class="slider-content">
+                                    <h4 class="title">Develop a Sense of Urgency</h4>  
+                                    <p>Act with a Sense of Urgency to make the best use of opportunities available to you in this rapidly changing world</p> 
+                                    <div class="slider_btn text-left" >
+                                        <a href="<?php echo(base_url() . "skill-talk-slider"); ?>">Know More</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <img class="img-responsive" src="<?php echo(base_url() . 'assets/img/' . 'banner1.jpg'); ?>" width="100%" alt="">
+                        </div>
+                        <div class="item">
+                            <div class="header-text hidden-xs" >  
+                                <div class="slider-content">
+                                    <h4 class="title">How good are your Credibility Building Skills?</h4>  
+                                    <p>Take the quick self-test to explore your understanding of various techniques of Credibility Building. Subscribe to the Monthly Newsletter and get our Art of Building Credibility e-Book FREE</p> 
+                                    <div class="slider_btn text-left" >
+                                        <a href="<?php echo(base_url() . "assessment-center-slider"); ?>">Get started</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <img class="img-responsive" src="<?php echo(base_url() . 'assets/img/' . 'banner2.jpg'); ?>" width="100%" alt="">
+                        </div>
+                        <div class="item">
+                            <div class="header-text hidden-xs">  
+                                <div class="slider-content">
+                                    <h4 class="title">Essentials of Employability</h4>  
+                                    <p>Learn about Employability scenario in India. Understand what Employability is and how you can work on enhancing your Employability.</p> 
+                                    <div class="slider_btn text-left" >
+                                        <a href="<?php echo(base_url() . "employability-zone-slider"); ?>">Know More</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <img class="img-responsive" src="<?php echo(base_url() . 'assets/img/' . 'banner3.jpg'); ?>" width="100%" alt="">
+                        </div>
+                    </div>
+
+                    <!--a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+                        <span class="glyphicon glyphicon-chevron-left"></span>
+                    </a>
+                    <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
+                        <span class="glyphicon glyphicon-chevron-right"></span>
+                    </a-->
+
+
+                </div>
+            </div>
+
+            <!-- Newsletter Column -->
+            <div class="col-md-4" id="newsletter">
+
+                <div class="dooble-border">
+
+                    <div class="well fre_news">
+                        <h3 id="free_news">Subscribe to our FREE Email Newsletter </h3> 
+                        
+
+                        <div class="row"> 
+                            <div class="col-md-9" style=" padding: 0 6px 0 15px;">
+                                <div class="input-group">
+                                    <form action="<?php echo base_url() . 'subscribNewsLetter/user'; ?>" id="news_letter" method="POST">
+                                        <input id="first_name" name="first_name" class="form-control inputbox" placeholder="First Name" type="text" data-validation-required-message="Please enter your first name." required="" aria-invalid="false"/> 
+                                        <input id="email" name="email" class="form-control inputbox" placeholder="Email" type="email" data-validation-required-message="Please enter your email address." required="" aria-invalid="false"/>
+
+                                        <button type="submit" class="bttn btn btn-primary inputbox"><b>Subscribe</b></button>
+                                    </form>
+                                </div>
+                            </div> 
+                        <div class="col-md-3" style="padding: 8px 9px 0 0;">
+                                <img class="img-responsive" src="<?php echo(base_url() . 'assets/img/' . 'art-of-building.png'); ?>" >
+                            </div>
+                        </div>
+
+                       <p class="textstyle">Signup for our free email newsletter and get our Art of Building Credibility e-Book FREE as the Subscription bonus<br><br><small class="text-right block"><a href="<?php echo(base_url() . "privacy-policy"); ?>" class="text-right">Our Privacy Policy</a></small></p> 
+                        <!-- /.input-group -->
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+        <!-- /.row -->
+        <div class="row">
+            <div class="col-md-8">
+                <div class="dooble-border">  
+                        <h5 class="our-prog-title">Skillpromise Programs</h5>
+                        <div class="row">
+                            <?php
+                            $query['data'] = $this->main_model->get_records('node', 'parent_id', 0, 'name');
+                            foreach ($query['data']->result() as $rec) {
+                                if (($rec->image_file) == NULL) {
+                                    
+                                } else {
+                                    $url = base_url() . 'assets/img/uploads/' . $rec->image_file;
+                                }
+                                ?>  
+                                <?php if ($rec->id == "1230" || $rec->id == "1231" || $rec->id == "1232") { ?>
+
+                                    <div class="col-sm-4"> 
+                                            <div class="prog-img pull-left margin-bottom">
+
+                                                <?php echo '<a href="' . base_url() . "node/program/$rec->id" . ' ">' ?>
+                                                <img class="img-responsive" style="height:175px;" src="<?php echo $url; ?>" alt=""/></a>
+
+                                            </div>
+                                            <div class="prog-content pull-right margin-bottom">
+                                                <?php echo '<a href="' . base_url() . "node/program/$rec->id" . ' ">' ?>
+                                                <span class=""><?= $rec->name; ?></span></a>
+
+                                            </div> 
+                                    </div>
+
+                                    <?php
+                                }
+                            }
+                            ?>
+                        </div> 
+                </div>
+            </div> 
+
+
+
+            <div class="col-md-4">
+
+                <div id="testimoni-owl" class="owl-carousel">
+                    <div class="item">
+                        <div class="img-cover">
+                            <img src="<?php echo(base_url() . 'assets/img/' . 'test1.jpg'); ?>" />
+                        </div>
+                        <div class="content-wrap">
+                            <h4>Title Here</h4>
+                             <span class="testimonial-icon"></span>
+                            <p>
+                               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin non convallis mi, in cursus erat. 
+                            </p>
+                            <span class="text-right"><small>- Designation</small></span>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="img-cover">
+                            <img src="<?php echo(base_url() . 'assets/img/' . 'test2.jpg'); ?>" />
+                        </div>
+                        <div class="content-wrap">
+                            <h4>Title Here</h4>
+                            <span class="testimonial-icon"></span>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin non convallis mi, in cursus erat. 
+                            </p>
+                            <span class="text-right"><small>- Designation</small></span>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+        <?php
+        $this->load->view('home_footer');
+        ?>
+    </div>
+</div>
+<style>
+    .nopadding {
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+</style>

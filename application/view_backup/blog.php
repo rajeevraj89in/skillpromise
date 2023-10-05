@@ -1,0 +1,127 @@
+<?php $this->load->view('home_header_view'); ?> 
+
+
+<!-- Content Row -->
+<div class="container main_container">
+    <div class="main_body">
+        <div class="row">
+
+
+             
+
+
+            
+            <section class="col-md-12" style="min-height: 395px;"> 
+
+                <div class="text-justify">
+                    <!--Blog categorie tab-->
+                    <div class="blog-tab"> 
+                      <!-- Nav tabs -->
+                      <ul class="nav nav-tabs" role="tablist">
+                        <li role="presentation" class="active"><a href="#communication" aria-controls="communication" role="tab" data-toggle="tab">Communication Skills</a></li>
+                        <li role="presentation"><a href="#cnt" aria-controls="cnt" role="tab" data-toggle="tab">Computers and Technology</a></li>
+                        <li role="presentation"><a href="#css" aria-controls="css" role="tab" data-toggle="tab">Customer Service Skills</a></li>
+                        <li role="presentation"><a href="#es" aria-controls="es" role="tab" data-toggle="tab">Employability Skills</a></li>
+                        <li role="presentation"><a href="#eng" aria-controls="eng" role="tab" data-toggle="tab">Engineering</a></li>
+                        <li role="presentation"><a href="#fin" aria-controls="fin" role="tab" data-toggle="tab">Finance</a></li> 
+                        <li role="presentation"><a href="#ca" aria-controls="ca" role="tab" data-toggle="tab">Current Affairs</a></li> 
+                        <li role="presentation"><a href="#hel" aria-controls="hel" role="tab" data-toggle="tab">Health</a></li> 
+                        <li role="presentation"><a href="#hr" aria-controls="hr" role="tab" data-toggle="tab">Human Resources</a></li> 
+                        <li role="presentation"><a href="#lif" aria-controls="lif" role="tab" data-toggle="tab">Lifestyle</a></li> 
+                        <li role="presentation"><a href="#ms" aria-controls="ms" role="tab" data-toggle="tab">Managerial Skills</a></li> 
+                        <li role="presentation"><a href="#mar" aria-controls="mar" role="tab" data-toggle="tab">Marketing</a></li> 
+                        <li role="presentation"><a href="#pps" aria-controls="pps" role="tab" data-toggle="tab">Personal Productivity Skills</a></li> 
+                        <li role="presentation"><a href="#ss" aria-controls="ss" role="tab" data-toggle="tab">Selling Skills</a></li> 
+                        <li role="presentation"><a href="#snh" aria-controls="snh" role="tab" data-toggle="tab">Sports and Hobbies</a></li> 
+
+
+                      </ul>
+
+                      <!-- Tab panes -->
+                      <div class="tab-content">
+                        <div role="tabpanel" class="tab-pane active" id="communication">
+                            <div class="container-fluied">
+                            <div class="row">
+                                <!--flex-box -->
+                              <div class="wrap-div">  
+                                <div class="col-md-4 margin-bottom">
+                                    <div class="blog-box" > 
+                                      <img class="img-responsive" src="<?php echo(base_url() . 'assets/img/' . 'Comm.jpg'); ?>" />  <br>
+                                        <small class="block">Picture Courtesy: Pixabay.com</small>
+                                      <h4>Five Signs of Internal Communication Breakdown in The Workplace</h4>
+                                        <span class="text-left"><small>By FifiArisandi</small></span>
+                                        <p>Research by Deloitte and Touche Hvuman Capital showed that 95% of CEOs agreed that effective ...</p> 
+                                        <button onclick="location.href='blog-detail'" type="button" class="btn btn-green pull-right">Read more</button>
+                                    </div>
+                                </div> 
+                                <div class="col-md-4 margin-bottom">
+                                    <div class="blog-box" > 
+                                      <img class="img-responsive" src="<?php echo(base_url() . 'assets/img/' . 'Way.jpg'); ?>" />  <br>
+                                        <small class="block">Picture Courtesy: Pixabay.com</small>
+                                      <h4>Ways to Improve Business Communication</h4>
+                                        <span class="text-left"><small>By Ralph Waldo</small></span>
+                                        <p>Effective communication is very important to run a business successfully. Good communication can endear you among ...</p> 
+                                        <button onclick="location.href='blog-detail'" type="button" class="btn btn-green pull-right">Read more</button>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 margin-bottom">
+                                    <div class="blog-box" > 
+                                      <img class="img-responsive" src="<?php echo(base_url() . 'assets/img/' . 'workp.jpg'); ?>" />  <br>
+                                        <small class="block">Picture Courtesy: Pixabay.com</small>
+                                      <h4>How to Deal with Workplace Gossips</h4>
+                                        <span class="text-left"><small>By Sandy Dsouza</small></span>
+                                        <p>Human beings are social animals and often give their opinions on various topics even if it is not asked ...</p> 
+                                        <button onclick="location.href='blog-detail'" type="button" class="btn btn-green pull-right">Read more</button>
+                                    </div>
+                                </div>  
+                                <div class="col-md-4 margin-bottom">
+                                    <div class="blog-box" > 
+                                      <img class="img-responsive" src="<?php echo(base_url() . 'assets/img/' . 'workp.jpg'); ?>" />  <br>
+                                        <small class="block">Picture Courtesy: Pixabay.com</small>
+                                      <h4>How to Deal with Workplace Gossips</h4>
+                                        <span class="text-left"><small>By Sandy Dsouza</small></span>
+                                        <p>Human beings are social animals and often give their opinions on various topics even if it is not asked ...</p> 
+                                        <button onclick="location.href='blog-detail'" type="button" class="btn btn-green pull-right">Read more</button>
+                                    </div>
+                                </div>  
+                                </div>
+                                <!--flex-box end-->
+                            </div>
+                            <!--row  end-->
+                        </div>
+
+
+
+                        </div>
+                        <div role="tabpanel" class="tab-pane" id="cnt">...</div>
+                        <div role="tabpanel" class="tab-pane" id="css">...</div>
+                        <div role="tabpanel" class="tab-pane" id="es">...</div>
+                        <div role="tabpanel" class="tab-pane" id="eng">...</div>
+                        <div role="tabpanel" class="tab-pane" id="fin">...</div>
+                        <div role="tabpanel" class="tab-pane" id="ca">...</div>
+                        <div role="tabpanel" class="tab-pane" id="hel">...</div>
+                        <div role="tabpanel" class="tab-pane" id="hr">...</div>
+                        <div role="tabpanel" class="tab-pane" id="lif">...</div>
+                        <div role="tabpanel" class="tab-pane" id="ms">...</div>
+                        <div role="tabpanel" class="tab-pane" id="mar">...</div>
+                        <div role="tabpanel" class="tab-pane" id="pps">...</div>
+                        <div role="tabpanel" class="tab-pane" id="ss">...</div>
+                        <div role="tabpanel" class="tab-pane" id="snh">...</div> 
+                      </div>
+
+                    </div>
+                     <!--Blog categorie tab end-->
+
+
+                    
+                </div> 
+            </section><!-- end col-md-9 --> 
+
+
+        </div>
+       
+<?php
+        $this->load->view('home_footer');
+        ?>
+    </div>
+</div>

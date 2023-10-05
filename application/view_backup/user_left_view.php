@@ -1,0 +1,25 @@
+<!-- Content and Sidebar
+======================================================= -->
+<div class="container main_container">
+    <div class="main_body">
+        <div class="row" id="bigCallout">
+            <?php
+            $return = $this->custom->get_nav_node_crumb($id, $nav_type);
+            
+            
+//            1.check for last id .
+            $child_node_id = $this->main_model->get_name_from_id('node', 'id', $id, $id_name = "parent_id");
+//            echo '<pre>';
+//                    print_r($return);
+//                    die;
+            if (!$child_node_id) {
+                $parent_id = $this->main_model->get_name_from_id('node', 'parent_id', $id, $id_name = "id");
+                
+                
+                $this->custom->get_side_navigation_panel_new($parent_id, $nav_type);
+            } else {
+                $this->custom->get_side_navigation_panel_new($id, $nav_type);
+            }
+            ?>
+            </aside><!-- end col-md-3 -->
+            <!-- end sidebar panel -->
